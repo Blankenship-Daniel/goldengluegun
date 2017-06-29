@@ -1,0 +1,7 @@
+<div *ngFor="let post of posts">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.published }}</p>
+  <p>{{ post.author.displayName }}</p>
+  <div [innerHTML]="post.content"></div>
+  <hr>
+</div>
