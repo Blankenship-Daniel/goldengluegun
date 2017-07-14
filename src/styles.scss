@@ -1,1 +1,146 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/sass-material-colors/sass/sass-material-colors';
+
+html {
+  font-family: 'Lato', sans-serif;
+  color: material-color('grey', '800');
+  height: 100%;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkDJ99BgADFQHBs+NiAAAAAABJRU5ErkJggg==), url('/assets/grouch.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+nav {
+  color: #fff;
+  text-transform: uppercase;
+  min-height: 600px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  letter-spacing: 3px;
+
+  ul {
+    margin: 30px 50px 0 0;
+
+    li {
+      display: inline-block;
+      padding: 0 20px;
+    }
+  }
+}
+
+.cta {
+  background: material-color('amber', 'a700');
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+.nav-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-title {
+  text-transform: uppercase;
+  color: #fff;
+
+  .top {
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: -20px;
+  }
+
+  .middle {
+    font-size: 8em;
+    color: material-color('amber');
+  }
+
+  .bottom {
+    font-size: 5em;
+    letter-spacing: 18px;
+    margin-top: -25px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: material-color('grey', '900');
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: material-color('grey', '200');
+}
+
+.content {
+  font-size: 16px;
+  margin: -175px auto 0px auto;
+  max-width: 1080px;
+  line-height: 25px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.timestamp, .author, .comment-content {
+  font-size: .8em;
+}
+
+.post {
+  margin-bottom: 50px;
+}
+
+.comment {
+  display: block;
+  position: relative;
+  padding: 15px;
+  margin: 10px 20px;
+  background: material-color('grey', '200');
+
+  .user-pic {
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  h4 {
+    margin: 5px 0;
+  }
+}
+
+.comment-content {
+  margin-top: 15px;
+}
+
+.timestamp {
+  font-weight: bold;
+}
+
+.author {
+  padding: 5px;
+  background: material-color('grey', '200');
+}
+
+/*
+ * This styling applies to DOM that comes through the blogspot API.
+ */
+.separator {
+  display: flex;
+  justify-content: center;
+}

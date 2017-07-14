@@ -6,14 +6,19 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 
 import { PostsService } from './posts.service';
+import { CommentsService } from './comments.service';
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
+import { CommentsComponent } from './comments/comments.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    CommentsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,8 @@ import { PostsComponent } from './posts/posts.component';
     })
   ],
   providers: [
-    PostsService
+    PostsService,
+    CommentsService
   ],
   bootstrap: [AppComponent]
 })

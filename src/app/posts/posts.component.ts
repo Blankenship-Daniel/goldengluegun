@@ -18,4 +18,19 @@ export class PostsComponent implements OnInit {
     );
   }
 
+  formatDatePiece(piece: number) {
+    return (piece < 10 ? '0' + piece : piece);
+  }
+
+  formatDate(date: string) {
+    let d: any = new Date(date);
+    let day: any = d.getDate();
+    let month: any = d.getMonth() + 1;
+    let year: number = d.getFullYear();
+
+    day = this.formatDatePiece(day);
+    month = this.formatDatePiece(month);
+
+    return month + '/' + day + '/' + year;
+  }
 }
