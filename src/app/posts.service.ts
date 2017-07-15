@@ -14,9 +14,9 @@ export class PostsService {
   constructor(private http: Http) { }
 
   getPosts() : Observable<any> {
-    let request: string = environment.apiEndpoint + '/blogs/' +
+    let request: string = environment.blogApiEndpoint + '/blogs/' +
                           environment.blogId + '/posts?key=' +
-                          environment.apiKey;
+                          environment.blogApiKey;
     return this.http.get(request)
               .map((res:Response) => res.json())
               .catch((error:any) => Observable.throw(

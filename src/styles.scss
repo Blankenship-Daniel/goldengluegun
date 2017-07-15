@@ -4,9 +4,7 @@ html {
   font-family: 'Lato', sans-serif;
   color: material-color('grey', '800');
   height: 100%;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkDJ99BgADFQHBs+NiAAAAAABJRU5ErkJggg==), url('/assets/grouch.jpg');
-  background-size: cover;
-  background-position: center;
+  background: material-color('grey', '300');
 }
 
 body {
@@ -17,7 +15,7 @@ body {
 nav {
   color: #fff;
   text-transform: uppercase;
-  min-height: 600px;
+  min-height: 400px;
 }
 
 a {

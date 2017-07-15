@@ -14,7 +14,7 @@ export class CommentsService {
   constructor(private http: Http) { }
 
   getComments(commentsUrl: string) : Observable<any> {
-    let request: string = commentsUrl + '?key=' + environment.apiKey;
+    let request: string = commentsUrl + '?key=' + environment.blogApiKey;
     return this.http.get(request)
               .map((res:Response) => res.json())
               .catch((error:any) => Observable.throw(
